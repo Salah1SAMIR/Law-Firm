@@ -1,0 +1,309 @@
+/* ===== CONSULTATION PAGE — LIGHT THEME (MATCHING SITE) ===== */
+
+/* Page Background — matches the white sections of the main site */
+.consultation-page {
+  margin-top: 0;
+  padding: 0 24px 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 140px;
+  min-height: 100vh;
+}
+
+body:has(.consultation-page) {
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+/* Ensure navbar starts scrolled (light glassmorphism) on this page since bg is white */
+body:has(.consultation-page) .navbar.transparent {
+  height: 72px;
+  background: rgba(248, 246, 242, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201, 161, 93, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+body:has(.consultation-page) .navbar.transparent .logo-text {
+  color: var(--text-dark);
+}
+body:has(.consultation-page) .navbar.transparent .nav-links a {
+  color: rgba(26, 26, 26, 0.7);
+}
+body:has(.consultation-page) .navbar.transparent .nav-links a:hover {
+  color: var(--text-dark);
+}
+body:has(.consultation-page) .navbar.transparent .nav-links a.active {
+  color: var(--accent);
+}
+body:has(.consultation-page) .navbar.transparent .mobile-toggle .hamburger-line {
+  background: var(--text-dark);
+}
+
+/* Page Header */
+.consult-page-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.consult-page-title {
+  font-family: var(--font-ar);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.consult-page-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Steps Card — Light Glassmorphism */
+.consultation-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.consultation-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(9,17,36,0.06);
+  transform: translateY(-2px);
+}
+
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  font-family: var(--font-ar);
+  box-shadow: 0 2px 12px rgba(201,161,93,0.25);
+}
+
+.step-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.step-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.step-check {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.step-divider {
+  height: 1px;
+  background: var(--border-light);
+  margin: 4px 0;
+}
+
+/* CTA Section */
+.consultation-cta-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.consultation-cta-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+
+.whatsapp-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #25d366, #1fba59);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: var(--font-ar);
+  transition: var(--transition);
+  box-shadow: 0 4px 24px rgba(37, 211, 102, 0.25);
+}
+
+.whatsapp-cta-btn:hover {
+  background: linear-gradient(135deg, #1fba59, #25d366);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 36px rgba(37, 211, 102, 0.4);
+}
+
+/* Service Features */
+.service-features {
+  text-align: center;
+}
+
+.features-header-line {
+  height: 1px;
+  background: var(--border-light);
+  margin-bottom: 28px;
+}
+
+.service-features h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-item {
+  background: var(--light-gray);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-item:hover {
+  background: var(--white);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 4px;
+  transition: var(--transition);
+}
+
+.feature-item:hover .feature-icon {
+  background: var(--primary);
+  color: var(--accent);
+  border-color: var(--primary);
+}
+
+.feature-item span {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.feature-item p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Active CTA Button in Nav */
+.nav-cta--active {
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent)) !important;
+  box-shadow: 0 4px 20px rgba(201,161,93,0.3) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .consultation-page {
+    padding-top: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 60px;
+  }
+
+  .consultation-card {
+    padding: 24px 20px;
+  }
+
+  .step-text {
+    font-size: 0.95rem;
+  }
+
+  .step-desc {
+    font-size: 0.8rem;
+  }
+
+  .whatsapp-cta-btn {
+    font-size: 1.05rem;
+    padding: 16px 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .consult-page-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-number {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .consultation-card {
+    padding: 20px 16px;
+  }
+}
